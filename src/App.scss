@@ -1,0 +1,84 @@
+// Colors
+$orange: #ff7218;
+$purple: #ac5fd0;
+$dark-purple: #613476;
+$select-clicked: #ffc718;
+$select-unclicked: #ffe465;
+$background: #fafafa;
+
+$font: 'Avenir', 'Open Sans', sans-serif;
+
+$breakpoint-mobile: 768px;
+
+body {
+  height: 100%;
+}
+
+.App {
+  font-family: $font;
+
+  .hero {
+    background-image: url('/hero.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .nav {
+      height: 5vh;
+      padding: 10px 100px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .hero-text {
+    height: 100%;
+    font-size: 3vmin;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    #welcome {
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: #fff;      
+    }
+
+    @media screen and (max-width: $breakpoint-mobile){
+      font-size: 6vmin;
+
+    }
+    
+    .hero-btn {
+      background-color: $purple
+    }
+
+    .hero-btn:hover {
+      background-color: darken($purple, 20%);
+    }
+    
+  }
+
+  .btn {
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background-color: $orange;
+  }
+
+  .btn:hover {
+    background-color: darken($orange, 20%);
+    cursor: pointer;
+  }
+
+}
