@@ -99,12 +99,14 @@ body {
 
   .content {
     padding: 100px;
+    width: 50%;
   }
 
   .split-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    height: 54vh;
 
     .img {
       width: 50%;
@@ -155,6 +157,8 @@ body {
   }
 
   .banner, .banner.left, .banner.right{
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @media screen and (max-width: $breakpoint-mobile){
       background-position: center;
@@ -171,10 +175,42 @@ body {
       }
     }
   }
+
+  .features {
+    height: 100%;
+    background-color: $background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .feature-img {
+      border: 1px solid $purple;
+      border-radius: 50%; 
+      height: 90px;
+      width: 90px;
+      padding: 30px;
+      margin: 20px 80px;
+   
+      img {
+        width: 90px;
+        height: 100%;
+      }
+    }
+    
+    .feature-title {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+
   .stars {
     display: flex;
     height: 30px;
   }
+
   .star {
     margin: 12.5px 0;
     position: relative;
