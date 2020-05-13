@@ -204,6 +204,10 @@ body {
       font-weight: bold;
       font-size: 1.2rem;
     }
+
+    @media screen and (max-width: $breakpoint-mobile){
+      
+    }
   }
 
   .stars {
@@ -249,6 +253,24 @@ body {
     border-left: 25px solid transparent;
     transform: rotate(-70deg);
     content: '';
+  }
+
+  .carousel {
+    width: 50%;
+    padding: 30px;
+
+    .carousel-slider {
+      display: flex;
+      align-items: center;
+      
+      .carousel-title, .carousel-arrow {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: $dark-purple;
+        padding: 10px;
+      }
+    }
   }
 
   .footer {
