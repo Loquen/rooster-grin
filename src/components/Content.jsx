@@ -7,11 +7,20 @@ function Content({title, body, link, stars}) {
       <div className='body'>
         {body}
       </div>
-      <div className='link'>
-        <a href='#'>> {link}</a>
-      </div>
+      {link ? 
+        <div className='link'>
+          <a href='#'>> {link}</a>
+        </div>
+        : null
+      }
       {stars ? 
-        <div className='stars'></div>
+        <div className='stars'>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+        </div>
         : null
       }
     </div>

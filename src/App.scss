@@ -127,9 +127,92 @@ body {
     height: 60vh;
     display: flex;
     align-items: center;
+
   }
   .banner.left {
     background-image: url('/banner-1.jpg');
     justify-content: left;
+    
+    .content {
+      position: relative;
+      left: 10%;
+    }
+  }
+  .banner, .banner.left, .banner.right{
+
+    @media screen and (max-width: $breakpoint-mobile){
+      background-position: center;
+      justify-content: center;
+    
+      .content {
+        padding: 0;
+      }
+    }
+  }
+  .stars {
+    display: flex;
+    height: 30px;
+  }
+  .star {
+    margin: 12.5px 0;
+    position: relative;
+    display: block;
+    color: $orange;
+    width: 0px;
+    height: 0px;
+    border-right: 25px solid transparent;
+    border-bottom: 17.5px solid $orange;
+    border-left: 25px solid transparent;
+    transform: rotate(35deg);
+  }
+  .star:before {
+    border-bottom: 20px solid $orange;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -11.25px;
+    left: -16.25px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+  }
+  .star:after {
+    position: absolute;
+    display: block;
+    color: $orange;
+    top: .75px;
+    left: -26.25px;
+    width: 0px;
+    height: 0px;
+    border-right: 25px solid transparent;
+    border-bottom: 17.5px solid $orange;
+    border-left: 25px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+
+  .footer {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: $background;
+
+    .follow {
+      font-weight: 600;
+      padding: 0 10px;
+    }
+
+    .social img{
+      filter: invert(22%) sepia(16%) saturate(2790%) hue-rotate(240deg) brightness(98%) contrast(89%);
+      fill: $dark-purple;
+      padding: 10px;
+      height: 100%;
+      width: 50px;
+    }
   }
 }

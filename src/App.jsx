@@ -23,7 +23,7 @@ const splitData = [
     title: 'Lorem Ipsum Dolor Sit Amet',
     body: '',
     link: '',
-    stars: false
+    stars: true
   }
 ];
 
@@ -46,11 +46,24 @@ function App() {
       <Hero />
       <SplitContainer 
         data={splitData[0]}
-        features={null}
-        carousel={null}
+        features={false}
+        carousel={false}
       />
       <Banner 
         data={bannerData[0]}
+      />
+      <SplitContainer
+        data={splitData[1]}
+        features={true}
+        carousel={false}
+      />
+      <Banner
+        data={bannerData[1]}
+      />
+      <SplitContainer
+        data={splitData[2]}
+        features={false}
+        carousel={true}
       />
       <Footer />
     </div>
