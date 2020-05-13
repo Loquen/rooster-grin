@@ -19,7 +19,7 @@ body {
 
   .hero {
     background-image: url('/hero.jpg');
-    height: 100vh;
+    height: 80vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,25 +52,26 @@ body {
       -webkit-text-stroke-color: #fff;      
     }
 
-    @media screen and (max-width: $breakpoint-mobile){
-      font-size: 6vmin;
-
-    }
     
     .hero-btn {
       background-color: $purple
     }
-
+    
     .hero-btn:hover {
       background-color: darken($purple, 20%);
     }
     
+    @media screen and (max-width: $breakpoint-mobile){
+      font-size: 6vmin;
+
+    }
   }
 
   .btn {
     padding: 20px 30px;
     font-size: 20px;
     font-weight: bold;
+    text-transform: uppercase;
     border: none;
     color: white;
     background-color: $orange;
@@ -80,32 +81,55 @@ body {
     background-color: darken($orange, 20%);
     cursor: pointer;
   }
+  
+  .title {
+    font-weight: bold;
+    color: $dark-purple;
+    text-transform: uppercase;
+  }
+  .link {
+    padding-top: 15px;
+  }
+
+  .link a {
+    text-decoration: none;
+    color: $dark-purple;
+    font-weight: bold;
+  }
+
+  .content {
+    padding: 100px;
+  }
 
   .split-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
-    .content {
-      padding: 100px;
-
-      .title {
-        color: $dark-purple;
-        text-transform: uppercase;
-      }
-      .link {
-        padding-top: 15px;
-      }
-
-      .link a {
-        text-decoration: none;
-        color: $dark-purple;
-        font-weight: bold;
-      }
-    }
-
     .img {
       width: 50%;
     }
+
+    @media screen and (max-width: $breakpoint-mobile){
+      flex-direction: column;
+
+      .content {
+        padding: 40px;
+      }
+
+      .img {
+        width: 100%;
+      }
+    }
+  }
+
+  .banner {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  .banner.left {
+    background-image: url('/banner-1.jpg');
+    justify-content: left;
   }
 }
