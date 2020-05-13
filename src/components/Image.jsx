@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Carousel(props) {
+function Image(props) {
   return (
     <div>
-      Carousel
+      image
     </div>
   );
 }
 
-export default Carousel;
+export default Image;

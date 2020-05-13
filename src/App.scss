@@ -81,4 +81,31 @@ body {
     cursor: pointer;
   }
 
+  .split-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .content {
+      padding: 100px;
+
+      .title {
+        color: $dark-purple;
+        text-transform: uppercase;
+      }
+      .link {
+        padding-top: 15px;
+      }
+
+      .link a {
+        text-decoration: none;
+        color: $dark-purple;
+        font-weight: bold;
+      }
+    }
+
+    .img {
+      width: 50%;
+    }
+  }
 }

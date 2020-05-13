@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Carousel(props) {
+function Features(props) {
   return (
     <div>
-      Carousel
+      features
     </div>
   );
 }
 
-export default Carousel;
+export default Features;
