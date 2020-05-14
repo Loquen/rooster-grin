@@ -13,7 +13,7 @@
 
 ## Favorite Parts:
 
-- I enjoyed building out the hero section because I've always enjoyed the astetich of the big welcome banners.
+- I enjoyed building out the hero section because I've always enjoyed the aesthetic of the big welcome banners.
 - I also really liked building the carousel from scratch because it allowed me to learn more about the inner workings of such a powerful component instead of just using an existing one. 
 ## To run the app: 
 ### Deployed at: rooster-grin-test-loquen.herokuapp.com
