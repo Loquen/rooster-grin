@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Content from './Content';
 import Features from './Features';
 import Carousel from './Carousel';

@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.scss';
-
 import Hero from './components/Hero';
 import SplitContainer from './components/SplitContainer';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
+
+import './App.scss';
 
 const splitData = [
   {
@@ -42,7 +42,7 @@ const bannerData = [
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Hero />
       <SplitContainer 
         data={splitData[0]}

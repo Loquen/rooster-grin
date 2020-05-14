@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 
-function Hero(props) {
+function Hero() {
   return (
     <div id='hero' className='hero'>
       <Navbar />

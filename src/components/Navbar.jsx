@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Navbar(props) {
+function Navbar() {
   return (
     <div className='nav'>
-      <img src='./logo-white.svg' alt="Rooster Grin"/>
+      <img src='./logo-white.svg' alt='Rooster Grin'/>
     </div>
   );
 }

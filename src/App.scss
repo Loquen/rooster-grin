@@ -264,6 +264,7 @@ body {
     border-left: 25px solid transparent;
     transform: rotate(35deg);
   }
+  
   .star:before {
     border-bottom: 20px solid $orange;
     border-left: 7.5px solid transparent;
@@ -277,6 +278,7 @@ body {
     content: '';
     transform: rotate(-35deg);
   }
+
   .star:after {
     position: absolute;
     display: block;

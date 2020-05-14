@@ -16,18 +16,18 @@ const featureItems = [
   {
     title: 'Lorem',
     img: '/home-retention.svg'
-  },
-]
+  }
+];
 
-function Features(props) {
+function Features() {
   return (
     <div className='features'>
       {featureItems.map((item, idx) => 
-        <div key={`${item.title}${idx}`} className="feature-item">
-          <div className="feature-img">
+        <div key={`${item.title}${idx}`} className='feature-item'>
+          <div className='feature-img'>
             <img src={item.img} alt={item.title}/>
           </div>
-          <div className="feature-title">
+          <div className='feature-title'>
             {item.title}
           </div>
         </div>

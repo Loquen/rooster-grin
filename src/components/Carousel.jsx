@@ -15,7 +15,7 @@ const reviews = [
   },
 ];
 
-function Carousel(props) {
+function Carousel() {
   const [activeReview, setActiveReview] = useState(0);
   const [fade, setFade] = useState(false);
 
