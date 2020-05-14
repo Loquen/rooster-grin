@@ -17,6 +17,7 @@ const reviews = [
 
 function Carousel(props) {
   const [activeReview, setActiveReview] = useState(0);
+  const [fade, setFade] = useState(false);
 
   const handleClick = (direction) => () => {
     console.log(activeReview + direction);
@@ -25,34 +26,38 @@ function Carousel(props) {
 
     if(nextReview >= 0 && nextReview < reviews.length){
       setActiveReview(nextReview);
+      setFade(true);
     }
   }
 
   return (
     <div className='carousel'>
-      <div className="carousel-slider">
+      <div className='carousel-slider'>
         <div 
-          className="carousel-arrow"
+          className='carousel-arrow'
           onClick={handleClick(-1)}
         >
           {'<'}
         </div>
-        <div className="carousel-content">
-          <div className="carousel-title">
+        <div 
+          className={`carousel-content ${fade ? 'fade' : ''}`}
+          onAnimationEnd={() => setFade(false)}
+        >
+          <div className='carousel-title'>
             {reviews[activeReview].title}
           </div>
-          <div className="carousel-body">
+          <div className='carousel-body'>
             {reviews[activeReview].body}
           </div>
         </div>
         <div 
-          className="carousel-arrow"
+          className='carousel-arrow'
           onClick={handleClick(1)}
         >
           >
         </div>
       </div>
-      <div className="selector-list">
+      <div className='selector-list'>
         {reviews.map((review, idx) => 
           <div className={`selector ${idx === activeReview ? 'active' : ''}`}></div>
         )}

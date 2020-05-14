@@ -80,6 +80,13 @@ body {
     border: none;
     color: white;
     background-color: $orange;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.4);
+  }
+
+  .btn:active {
+    background-color: $orange;
+    box-shadow: 0 5px 5px 5px rgba(0,0,0,.4);
+    transform: translateY(8px);
   }
 
   .btn:hover {
@@ -101,6 +108,12 @@ body {
     text-decoration: none;
     color: $dark-purple;
     font-weight: bold;
+  }
+
+  .link a:hover {
+    color: lighten($dark-purple, 15%);
+    transition: .75s;
+    animation-timing-function: ease-out;
   }
 
   .content {
@@ -288,6 +301,18 @@ body {
       .carousel-content {
         padding: 20px;
       }
+
+      .carousel-content.fade {
+        animation: fade-in 1.5s;
+        animation-timing-function: ease-out;
+      }
+
+      @keyframes fade-in {
+        from {opacity: 0}
+        to {opacity: 1}
+        
+      }
+
       .carousel-title, .carousel-arrow {
         text-align: center;
         font-weight: bold;
@@ -297,8 +322,11 @@ body {
       }
     }
 
-    .carousel-arrow {
+    .carousel-arrow:hover {
       cursor: pointer;
+      color: lighten($dark-purple, 20%);
+      transition: .75s;
+      animation-timing-function: ease-out;
     }
 
     .selector-list {
@@ -316,6 +344,9 @@ body {
 
       .active {
         background-color: $select-clicked;
+        transition: 1.5s;
+        animation-timing-function: ease-out;
+        opacity: 1;
       }
     }
 
@@ -343,10 +374,14 @@ body {
 
     .social img{
       filter: invert(22%) sepia(16%) saturate(2790%) hue-rotate(240deg) brightness(98%) contrast(89%);
-      fill: $dark-purple;
       padding: 10px;
       height: 100%;
       width: 50px;
+    }
+
+    .social img:hover {
+      filter: invert(20%) sepia(16%) saturate(2500%) hue-rotate(240deg) brightness(80%) contrast(30%);
+      transition: .75s;
     }
   }
 }
