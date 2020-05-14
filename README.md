@@ -16,7 +16,7 @@
 - I enjoyed building out the hero section because I've always enjoyed the aesthetic of the big welcome banners.
 - I also really liked building the carousel from scratch because it allowed me to learn more about the inner workings of such a powerful component instead of just using an existing one. 
 ## To run the app: 
-### [Deployed here](http://www.rooster-grin-test-loquen.herokuapp.com)
+### [Deployed here](http://rooster-grin-test-loquen.herokuapp.com)
 ### `yarn dev-start`
 
 Runs the app in the development mode.<br />
