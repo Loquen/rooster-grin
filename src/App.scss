@@ -19,11 +19,18 @@ body {
 
   .hero {
     background-image: url('/hero.jpg');
-    height: 80vh;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    animation: heroFade 3s;
+    animation-timing-function: ease-out;
+
+    @keyframes heroFade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    } 
 
     .nav {
       height: 5vh;
@@ -224,6 +231,16 @@ body {
       img {
         width: 90px;
         height: 100%;
+      }
+    }
+
+    .feature-img:hover {
+      animation: bounce 1s;
+      animation-timing-function: ease-out;
+
+      @keyframes bounce {
+        0%, 100% {transform: translateY(0);}
+        50% {transform: translateY(-5px);}
       }
     }
     
