@@ -33,6 +33,12 @@ body {
         height: 100%;
       }
     }
+
+    @media screen and (max-width: $breakpoint-mobile){
+      .nav {
+        padding: 10px;
+      }
+    }
   }
 
   .hero-text {
@@ -63,7 +69,6 @@ body {
     
     @media screen and (max-width: $breakpoint-mobile){
       font-size: 6vmin;
-
     }
   }
 
@@ -79,6 +84,7 @@ body {
 
   .btn:hover {
     background-color: darken($orange, 20%);
+    transition: 0.75s;
     cursor: pointer;
   }
   
@@ -106,21 +112,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 54vh;
+    min-height: 54vh;
 
     .img {
       width: 50%;
+
+      img {
+        width: 100%;
+      }
     }
 
     @media screen and (max-width: $breakpoint-mobile){
       flex-direction: column;
 
       .content {
+        margin: auto;
         padding: 40px;
+        width: 80%;
       }
 
       .img {
         width: 100%;
+      }
+
+      .title {
+        text-align: center;
       }
     }
   }
@@ -177,12 +193,13 @@ body {
   }
 
   .features {
-    height: 100%;
+    min-height: 65vh;
     background-color: $background;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 20px 0;
 
     .feature-img {
       border: 1px solid $purple;
@@ -206,13 +223,17 @@ body {
     }
 
     @media screen and (max-width: $breakpoint-mobile){
-      
+      height: 100%;
+      padding: 20px 0 60px;
     }
   }
 
   .stars {
     display: flex;
-    height: 30px;
+
+    @media screen and (max-width: $breakpoint-mobile){
+      justify-content: center;
+    }
   }
 
   .star {
@@ -257,12 +278,16 @@ body {
 
   .carousel {
     width: 50%;
-    padding: 30px;
+    padding: 50px;
+    margin-right: 2.5rem;
 
     .carousel-slider {
       display: flex;
       align-items: center;
       
+      .carousel-content {
+        padding: 20px;
+      }
       .carousel-title, .carousel-arrow {
         text-align: center;
         font-weight: bold;
@@ -271,9 +296,38 @@ body {
         padding: 10px;
       }
     }
+
+    .carousel-arrow {
+      cursor: pointer;
+    }
+
+    .selector-list {
+      width: 30px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+
+      .selector {
+        background-color: $select-unclicked;
+        border-radius: 50%;
+        padding: 8px;
+        margin: 5px;
+      }
+
+      .active {
+        background-color: $select-clicked;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile){
+      width: auto;
+      margin: auto;
+      padding: 50px 10px;
+    }
   }
 
   .footer {
+    margin-top: auto;
     padding: 30px;
     display: flex;
     flex-direction: column;

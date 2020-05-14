@@ -53,9 +53,9 @@ function Carousel(props) {
         </div>
       </div>
       <div className="selector-list">
-        <div className="selector"></div>
-        <div className="selector"></div>
-        <div className="selector"></div>
+        {reviews.map((review, idx) => 
+          <div className={`selector ${idx === activeReview ? 'active' : ''}`}></div>
+        )}
       </div>
     </div>
   );

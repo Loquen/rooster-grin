@@ -7,8 +7,12 @@ function Footer(props) {
         Follow Us:
       </div>
       <div className='social'>
-        <img src='/instagram.svg' alt='Instagram'/>
-        <img src='/facebook.svg' alt='Facebook'/>
+        <a href="https://www.instagram.com">
+          <img src='/instagram.svg' alt='Instagram'/>
+        </a>
+        <a href="https://www.facebook.com">
+          <img src='/facebook.svg' alt='Facebook'/>
+        </a>
       </div>
     </div>
   );
