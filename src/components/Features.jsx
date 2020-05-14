@@ -22,8 +22,8 @@ const featureItems = [
 function Features(props) {
   return (
     <div className='features'>
-      {featureItems.map(item => 
-        <div key={item.title} className="feature-item">
+      {featureItems.map((item, idx) => 
+        <div key={`${item.title}${idx}`} className="feature-item">
           <div className="feature-img">
             <img src={item.img} alt={item.title}/>
           </div>

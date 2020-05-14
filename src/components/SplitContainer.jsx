@@ -15,9 +15,7 @@ function SplitContainer({data, features, carousel}) {
       />
       {features ? <Features/>
       : carousel ? <Carousel/>
-      : <div className='img'>
-          <img src='/img-1.jpg' alt='Friends Hiking'/>
-        </div>
+      : <div className='img'></div>
       }
     </div>
   );

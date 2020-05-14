@@ -9,7 +9,7 @@ function Content({title, body, link, stars}) {
       </div>
       {link ? 
         <div className='link'>
-          <a href='#'>> {link}</a>
+          <a href='#hero'>> {link}</a>
         </div>
         : null
       }
